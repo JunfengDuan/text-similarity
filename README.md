@@ -18,6 +18,27 @@ SciPy >= 0.18.1
 Six >= 1.5.0
 smart_open >= 1.2.1
 
+## 程序说明
+
+主程序：run.py
+
+1、对于文档集固定不变的情况：
+
+先将模型和文档集转变成向量表示并缓存，cache_model_corpora()，其中raw_corpus.txt存放文档集
+
+每次计算调用 text_similarity(text, num_best)
+
+
+2、每次计算文档集会变的情况：
+
+text_similarity(text, docs, num_best)
+
+text：一个新文档
+
+docs：文档集
+
+num_best：返回最相似的文档数量
+
 ## 基本概念
 语料（Corpus）：一组原始文本的集合，用于无监督地训练文本主题的隐层结构，语料中不需要人工标注的附加信息。
 在Gensim中，Corpus是一个二维矩阵，每一次迭代返回一个可用于表达文本对象的稀疏向量。
