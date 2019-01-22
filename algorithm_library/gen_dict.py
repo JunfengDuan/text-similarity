@@ -41,3 +41,7 @@ def read_file(file_path):
     return data
 
 
+def write_file(content, file_path):
+    with open(file_path, 'w', encoding='utf-8') as f:
+        f.writelines(content)
+
